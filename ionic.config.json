@@ -1,10 +1,10 @@
 {
-  "defaultProject": "customer-mobile",
+  "defaultProject": "mobile",
   "projects": {
-    "customer-mobile": {
-      "name": "Customer App",
+    "mobile": {
+      "name": "Cycles App",
       "npmClient": "yarn",
-      "root": "apps/customer/mobile",
+      "root": "apps/mobile",
       "type": "angular",
       "integrations": {
         "capacitor": {},

@@ -1,5 +1,5 @@
 {
-  "name": "@nx-ionic/customer",
+  "name": "@matheo/cycles-app",
   "version": "0.0.1",
   "scripts": {
     "plugin": "yarn add",
@@ -12,10 +12,10 @@
     "cap:update": "npx cap update"
   },
   "dependencies": {
-    "@capacitor/android": "^1.2.1",
-    "@capacitor/core": "1.2.1"
+    "@capacitor/android": "^2.0.1",
+    "@capacitor/core": "2.0.1"
   },
   "devDependencies": {
-    "@capacitor/cli": "1.2.1"
+    "@capacitor/cli": "2.0.1"
   }
 }

@@ -1,6 +1,6 @@
 {
-  "appId": "co.matheo.customer",
-  "appName": "Customer App",
+  "appId": "co.matheo.cycles",
+  "appName": "Cycles App",
   "npmClient": "yarn",
   "webDir": "www",
   "linuxAndroidStudioPath": "/snap/android-studio/current/android-studio/bin/studio.sh"

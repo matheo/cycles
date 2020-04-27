@@ -1,5 +1,5 @@
 {
-  "npmScope": "nx-ionic",
+  "npmScope": "cycles",
   "implicitDependencies": {
     "angular.json": "*",
     "package.json": "*",
@@ -15,11 +15,11 @@
     "website": {
       "tags": []
     },
-    "customer-mobile-e2e": {
+    "mobile-e2e": {
       "tags": [],
-      "implicitDependencies": ["customer-mobile"]
+      "implicitDependencies": ["mobile"]
     },
-    "customer-mobile": {
+    "mobile": {
       "tags": ["mobile"]
     }
   },

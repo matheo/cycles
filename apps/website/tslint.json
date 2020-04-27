@@ -1,8 +1,8 @@
 {
   "extends": "../../tslint.json",
   "rules": {
-    "directive-selector": [true, "attribute", "nxIonic", "camelCase"],
-    "component-selector": [true, "element", "nx-ionic", "kebab-case"]
+    "directive-selector": [true, "attribute", "web", "camelCase"],
+    "component-selector": [true, "element", "web", "kebab-case"]
   },
   "linterOptions": {
     "exclude": ["!**/*"]

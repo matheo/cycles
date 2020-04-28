@@ -1,7 +1,8 @@
 {
   "rulesDirectory": [
     "node_modules/@nrwl/workspace/src/tslint",
-    "node_modules/codelyzer"
+    "node_modules/codelyzer",
+    "tslint-consistent-codestyle"
   ],
   "rules": {
     "align": [
@@ -63,6 +64,17 @@
         ]
       }
     ],
+    "naming-convention": [
+      true,
+      {"type": "enumMember", "format": "PascalCase"},
+      {"type": "enum", "format": "PascalCase"},
+      {"type": "type", "format": "PascalCase"},
+      {"type": "variable", "format": "camelCase"},
+      {"type": "variable", "filter": "^_$", "format": null},
+      {"type": "variable", "filter": "_TOKEN$", "format": "UPPER_CASE"},
+      {"type": "member", "format": "camelCase"}
+    ],
+    "no-accessor-recursion": true,
     "no-any": true,
     "no-arg": true,
     "no-bitwise": true,
@@ -90,14 +102,24 @@
     "no-misused-new": true,
     "no-non-null-assertion": true,
     "no-redundant-jsdoc": true,
+    "no-return-undefined": true,
     "no-shadowed-variable": true,
+    "no-static-this": true,
     "no-string-literal": false,
     "no-string-throw": true,
     "no-switch-case-fall-through": true,
+    "no-unnecessary-else": true,
     "no-unnecessary-initializer": true,
+    "no-unnecessary-type-annotation": true,
+    "no-unused": true,
     "no-unused-expression": true,
+    "no-var-before-return": [
+      true,
+      "allow-destructuring"
+    ],
     "no-var-keyword": true,
     "object-literal-sort-keys": false,
+    "object-shorthand-properties-first": true,
     "ordered-imports": [
       true,
       {
@@ -106,7 +128,13 @@
         "module-source-path": "basename"
       }
     ],
+    "parameter-properties": [
+      true,
+      "leading"
+    ],
     "prefer-const": true,
+    "prefer-const-enum": true,
+    "prefer-while": true,
     "radix": true,
     "semicolon": { "options": "always" },
     "strict-boolean-expressions": false,

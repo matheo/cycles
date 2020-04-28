@@ -303,6 +303,45 @@
           }
         }
       }
+    },
+    "threejs": {
+      "projectType": "library",
+      "root": "libs/threejs",
+      "sourceRoot": "libs/threejs/src",
+      "prefix": "threejs",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/threejs/tsconfig.lib.json",
+            "project": "libs/threejs/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/threejs/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/threejs/tsconfig.lib.json",
+              "libs/threejs/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/threejs/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/threejs/jest.config.js",
+            "tsConfig": "libs/threejs/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/threejs/src/test-setup.ts"
+          }
+        }
+      }
     }
   },
   "cli": {

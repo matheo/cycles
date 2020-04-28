@@ -17,7 +17,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@cycles/threejs": ["libs/threejs/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"],
   "angularCompilerOptions": {

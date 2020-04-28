@@ -21,6 +21,9 @@
     },
     "mobile": {
       "tags": ["mobile"]
+    },
+    "threejs": {
+      "tags": ["three"]
     }
   },
   "tasksRunnerOptions": {

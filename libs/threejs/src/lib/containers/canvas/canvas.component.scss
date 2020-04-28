@@ -1,0 +1,12 @@
+/**
+ * Renderer
+ */
+canvas#renderer {
+  width   : 100%;
+  height  : 100%;
+  touch-action: none;
+
+  &:focus {
+    outline: none;
+  }
+}

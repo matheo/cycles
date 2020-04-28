@@ -1,7 +1,10 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import * as fromBarrel from './threejs.barrel';
 
 @NgModule({
-  imports: [CommonModule]
+  imports: fromBarrel.modules,
+  providers: fromBarrel.providers,
+  declarations: fromBarrel.components,
+  exports: fromBarrel.exports,
 })
 export class ThreejsModule {}

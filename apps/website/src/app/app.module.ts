@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ThreejsModule } from '@cycles/threejs';
 import { AppComponent } from './app.component';
 
 @NgModule({
+  imports: [
+    BrowserModule,
+    ThreejsModule,
+  ],
   declarations: [AppComponent],
-  imports: [BrowserModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

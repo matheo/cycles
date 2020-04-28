@@ -4,7 +4,7 @@ import { ThreejsModule } from './threejs.module';
 describe('ThreejsModule', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ThreejsModule]
+      imports: [ThreejsModule],
     }).compileComponents();
   }));
 

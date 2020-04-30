@@ -10,27 +10,41 @@
   "projects": {
     "website-e2e": {
       "tags": [],
-      "implicitDependencies": ["website"]
+      "implicitDependencies": [
+        "website"
+      ]
     },
     "website": {
       "tags": []
     },
     "mobile-e2e": {
       "tags": [],
-      "implicitDependencies": ["mobile"]
+      "implicitDependencies": [
+        "mobile"
+      ]
     },
     "mobile": {
-      "tags": ["mobile"]
+      "tags": [
+        "mobile"
+      ]
     },
     "threejs": {
-      "tags": ["three"]
+      "tags": [
+        "three"
+      ]
     }
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "accessToken": "ZjI3NDVmMDAtZDNiZC00ODk1LTg3NzctNjY5MDJlMmNlYjQxfHJlYWQtd3JpdGU=",
+        "cacheableOperations": [
+          "build",
+          "test",
+          "lint",
+          "e2e"
+        ]
       }
     }
   }

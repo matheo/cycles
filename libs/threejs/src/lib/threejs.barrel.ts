@@ -10,10 +10,10 @@ export const providers = [
   EngineService,
 ];
 
-export const exports = [
+export const exported = [
   CanvasComponent,
 ];
 
 export const components = [
-  ...exports,
+  ...exported,
 ];

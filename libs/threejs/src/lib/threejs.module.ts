@@ -5,6 +5,6 @@ import * as fromBarrel from './threejs.barrel';
   imports: fromBarrel.modules,
   providers: fromBarrel.providers,
   declarations: fromBarrel.components,
-  exports: fromBarrel.exports,
+  exports: fromBarrel.exported,
 })
 export class ThreejsModule {}

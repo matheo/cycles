@@ -2,10 +2,7 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
-    "types": [
-      "node",
-      "webgl2"
-    ]
+    "types": ["node", "webgl2"]
   },
   "files": ["src/main.ts", "src/polyfills.ts"],
   "include": ["**/*.ts"],

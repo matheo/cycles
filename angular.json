@@ -26,7 +26,9 @@
               "apps/website/src/favicon.ico",
               "apps/website/src/assets"
             ],
-            "styles": ["apps/website/src/styles.scss"],
+            "styles": [
+              "apps/website/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -59,7 +61,10 @@
                 }
               ]
             }
-          }
+          },
+          "outputs": [
+            "dist/apps/website"
+          ]
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -85,16 +90,20 @@
               "apps/website/tsconfig.app.json",
               "apps/website/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/website/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/website/**/*"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "apps/website/jest.config.js",
-            "tsConfig": "apps/website/tsconfig.spec.json",
-            "setupFile": "apps/website/src/test-setup.ts"
-          }
+            "jestConfig": "apps/website/jest.config.js"
+          },
+          "outputs": [
+            "coverage/apps/website"
+          ]
         },
         "ionic-cordova-serve": {
           "builder": "@ionic/angular-toolkit:cordova-serve",
@@ -143,8 +152,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["e2e/website-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/website-e2e/**"]
+            "tsConfig": [
+              "e2e/website-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/website-e2e/**"
+            ]
           }
         }
       }
@@ -238,7 +252,10 @@
                 }
               ]
             }
-          }
+          },
+          "outputs": [
+            "apps/mobile/www"
+          ]
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -264,16 +281,20 @@
               "apps/mobile/tsconfig.app.json",
               "apps/mobile/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/mobile/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/mobile/**/*"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "apps/mobile/jest.config.js",
-            "tsConfig": "apps/mobile/tsconfig.spec.json",
-            "setupFile": "apps/mobile/src/test-setup.ts"
-          }
+            "jestConfig": "apps/mobile/jest.config.js"
+          },
+          "outputs": [
+            "coverage/apps/mobile"
+          ]
         }
       }
     },
@@ -298,8 +319,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["e2e/mobile-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/mobile-e2e/**"]
+            "tsConfig": [
+              "e2e/mobile-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/mobile-e2e/**"
+            ]
           }
         }
       }
@@ -314,7 +340,8 @@
           "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/threejs/tsconfig.lib.json",
-            "project": "libs/threejs/ng-package.json"
+            "project": "libs/threejs/ng-package.json",
+            "buildableProjectDepsInPackageJsonType": "dependencies"
           },
           "configurations": {
             "production": {
@@ -329,17 +356,21 @@
               "libs/threejs/tsconfig.lib.json",
               "libs/threejs/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/threejs/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/threejs/**/*"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/threejs/jest.config.js",
-            "tsConfig": "libs/threejs/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "libs/threejs/src/test-setup.ts"
-          }
+            "passWithNoTests": true
+          },
+          "outputs": [
+            "coverage/libs/threejs"
+          ]
         }
       }
     }

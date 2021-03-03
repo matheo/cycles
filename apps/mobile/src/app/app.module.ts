@@ -8,7 +8,10 @@ import { AppComponent } from './app.component';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([], { initialNavigation: 'enabled' }),
+    RouterModule.forRoot([], {
+      initialNavigation: 'enabled',
+      relativeLinkResolution: 'legacy'
+    }),
     IonicModule.forRoot(),
   ],
   providers: [],

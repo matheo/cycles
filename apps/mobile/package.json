@@ -1,6 +1,7 @@
 {
   "name": "@matheo/cycles-app",
   "version": "0.0.1",
+  "private": true,
   "scripts": {
     "plugin": "yarn add",
     "postplugin": "npx cap sync",
@@ -12,10 +13,10 @@
     "cap:update": "npx cap update"
   },
   "dependencies": {
-    "@capacitor/android": "^2.0.1",
-    "@capacitor/core": "2.0.1"
+    "@capacitor/android": "^2.4.7",
+    "@capacitor/core": "^2.4.7"
   },
   "devDependencies": {
-    "@capacitor/cli": "2.0.1"
+    "@capacitor/cli": "^2.4.7"
   }
 }

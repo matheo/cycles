@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     RouterModule.forRoot([], {
       initialNavigation: 'enabled',
-      relativeLinkResolution: 'legacy'
+      relativeLinkResolution: 'legacy',
     }),
     IonicModule.forRoot(),
   ],

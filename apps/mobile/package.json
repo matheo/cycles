@@ -1,16 +1,14 @@
 {
-  "name": "@matheo/cycles-app",
+  "name": "@cycles/mobile",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "plugin": "yarn add",
-    "postplugin": "npx cap sync",
-    "cap": "npx cap",
-    "cap:add": "npx cap add",
-    "cap:copy": "npx cap copy",
-    "cap:open": "npx cap open",
-    "cap:sync": "npx cap sync",
-    "cap:update": "npx cap update"
+    "cap:add": "cap add",
+    "cap:copy": "cap copy",
+    "cap:open": "cap open",
+    "cap:sync": "cap sync",
+    "cap:update": "cap update",
+    "postinstall": "[ -d www ] && cap sync"
   },
   "dependencies": {
     "@capacitor/android": "^2.4.7",
